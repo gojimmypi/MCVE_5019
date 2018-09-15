@@ -64,20 +64,21 @@ int setupWiFi() {
 	return 0;
 }
 
-// The setup() function runs once each time the micro-controller starts
+// *******************************************************************************************
 void setup()
+// *******************************************************************************************
 {
 	delay(500);
 	Serial.begin(19200);
-	Serial.println("MVSE 5029");
+	Serial.println("MCVE 5029 V1");
 	setupWiFi();
 	
 	GetDashboardDataFile();
-
 }
 
-// Add the main program code into the continuous loop() function
+// *******************************************************************************************
 void loop()
+// *******************************************************************************************
 {
 	client.setInsecure();
 	if (!client.connect(DASHBOARD_HOST, httpPort)) {
@@ -86,9 +87,9 @@ void loop()
 		return;
 	}
 	else {
-		Serial.println("Success!"); // TODO 
+		Serial.println("Success!"); // We never get here if first needing to accept terms and conditions, instead: error 
 	}
 	yield();
-	delay(5000);
+	delay(20000); 
 
 }
