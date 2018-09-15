@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MVCE_5019.ino" />
+    <None Include="MCVE_5019.ino" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="__vm\.MVCE_5019.vsarduino.h">
+    <ClInclude Include="__vm\.MCVE_5019.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GlobalDefine.h">
