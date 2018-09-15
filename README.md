@@ -1,7 +1,5 @@
 # MCVE_5019
-MVCE for esp8266/Arduino/issues/5019
-
-See https://github.com/esp8266/Arduino/issues/5019
+MCVE for https://github.com/esp8266/Arduino/issues/5019
 
 Project created in Visual Studio with Visual Micro extension.
 
