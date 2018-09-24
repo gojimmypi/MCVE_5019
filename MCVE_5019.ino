@@ -74,8 +74,19 @@ void setupLocalTime()
 	// if no time is avalable, then try to set time from the network
 	if (now <= 1500000000) {
 		// try to set network time via ntp packets
-		configTime(myTimezone * SecondsPerHour, dst * 0, "pool.ntp.org", "time.nist.gov");
-		setenv("TZ", "PST8PDT,M4.1.0/02:00:00,M10.5.0/02:00:00", 1); // see https://users.pja.edu.pl/~jms/qnx/help/watcom/clibref/global_data.html
+		configTime(0, 0, "pool.ntp.org", "time.nist.gov"); // see https://github.com/esp8266/Arduino/issues/4749#issuecomment-390822737
+
+        // Starting in 2007, most of the United States and Canada observe DST from
+		// the second Sunday in March to the first Sunday in November.
+		// example setting Pacific Time:
+		setenv("TZ", "PST8PDT,M3.2.0/02:00:00,M11.1.0/02:00:00", 1); // see https://users.pja.edu.pl/~jms/qnx/help/watcom/clibref/global_data.html
+		//                     | month 3, second sunday at 2:00AM
+		//                                    | Month 11 - firsst Sunday, at 2:00am  
+		// Mm.n.d
+		//   The dth day(0 <= d <= 6) of week n of month m of the year(1 <= n <= 5, 1 <= m <= 12, where 
+		//     week 5 means "the last d day in month m", which may occur in the fourth or fifth week).
+		//     Week 1 is the first week in which the dth day occurs.Day zero is Sunday.
+
 		tzset();
 		Serial.print("Waiting for time(nullptr).");
 		i = 0;
@@ -108,8 +119,11 @@ void setupLocalTime()
 	Serial.println("");
 
 	// get the time from the system
+	char *tzvalue;
+	tzvalue = getenv("TZ");
 	Serial.print("Network time:");  Serial.println(now);
 	Serial.println(ctime(&now));
+	Serial.print("tzvalue for timezone = "); Serial.println(tzvalue);
 
 	// TODO - implement a web service that returns current epoch time to use when NTP unavailable (insecure SSL due to cert date validation)
 
@@ -148,11 +162,6 @@ void setup()
 	delay(500);
 	Serial.begin(115200);
 	Serial.println("MCVE 5029 V1");
-	time_t now;
-	now = time(nullptr);
-	Serial.print("Initial time:"); Serial.println(now);
-	Serial.println(ctime(&now));
-
 
 	//configTime(0, 0, "pool.ntp.org");
 	//setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 3);
