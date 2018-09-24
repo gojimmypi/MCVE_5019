@@ -1,0 +1,1024 @@
+Opening port
+Port open
+MCVE 5029 V1
+Initial time:28803
+Thu Jan  1 08:00:03 1970
+
+
+Waiting for time
+Next time:28803
+Thu Jan  1 08:00:03 1970
+
+Final time:
+1537572948
+Sat Sep 22 01:35:48 2018
+
+Heap (setupWiFi begin) Heap = 40288;
+htmlSetClient(&client)... Heap = 40272;
+setupWiFi Heap = 40304
+setupWiFi Heap = 40304
+calling wifiConnect...
+***********************************
+wifiConnect: Connecting to Visitor WiFi
+***********************************
+setupWiFi Heap = 40304
+setupWiFi Heap = 40304
+setupWiFi Heap = 40120
+Starting WiFi Connection Loop...
+.Connected!
+MAC Address=CCCCCCCCCCCC
+setupWiFi Heap = 40568
+setupWiFi Heap = 40568
+WiFi connected. My IP address:
+
+192.168.131.210
+start confirmedInternetConnectivity: 40520
+
+***********************************
+confirmedInternetConnectivity() - htmlString:
+***********************************
+GET http://github.com/ HTTP/1.1
+Host: github.com
+Content-Encoding: identity
+Connection: keep-alive
+
+
+***********************************
+1.  Heap = 40464; start confirmedInternetConnectivity: 40400
+>>>> htmlSend
+start confirmedInternetConnectivity: 40280
+Memory free heap:  Heap = 40296; Memory free heap:  Heap = 40296;
+>>>> SET_HEAP_MESSAGE
+htmlSend: 40344
+Memory free heap:  Heap = 40296; Memory free heap:  Heap = 40296;
+>>>> htmlSend end heap test
+Connection status: 3
+client status = 0
+client available = 0
+client getLastSSLError = 0
+client getWriteError = 0
+client getWriteError = Connecting to port 80
+SUCCESS! Connecting to port 80
+Target is not port 80; stopAll...
+***********************************
+Connecting to github.com; port 443
+***********************************
+github.com:443 htmlSend connection failed, flushing and trying htmlSendPlainText...
+
+>>>> Start htmlSendPlainText
+htmlSend: 39984
+Memory free heap after OtherClient:  Heap = 39888; htmlSend: 39984
+>>>> htmlSendPlainText
+***********************************
+Connecting to github.com; port 80
+***********************************
+Sending OtherClient HTML:
+***********************************
+GET http://github.com/ HTTP/1.1
+Host: github.com
+Content-Encoding: identity
+Connection: keep-alive
+
+
+***********************************
+Memory free heap:  Heap = 39664; htmlSend: 39712
+.......
+First Response Line = HTTP/1.1 200 OK
+Found Response Content Length = 440
+Found Response Content Location =
+accessRedirect debug
+ResponseLocation = http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+accessRedirect = http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+accessRedirect = /fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html%26ap_mac=aa:aa:aa:aa:aa:aa%26client_mac=cc:cc:cc:cc:cc:cc%26wlan=Visitor%20WiFi%26redirect=github.com/
+
+Response Header:
+***********************************
+HTTP/1.1 200 OK
+Location: http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+Content-Type: text/html
+Content-Length: 440
+
+***********************************
+
+Response Payload Content:
+***********************************
+
+<HTML>
+<HEAD>
+    <TITLE> Web Authentication Redirect</TITLE>
+    <META http-equiv="Cache-control" content="no-cache">
+    <META http-equiv="Pragma" content="no-cache">
+    <META http-equiv="Expires" content="-1">
+    <META http-equiv="refresh" content="1; URL=http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/">
+</HEAD>
+</HTML>
+
+***********************************
+
+
+Read done! Additional Read Responses:0
+*** End of response. 7 lines.
+
+thisResponseHeader.indexOf(Location: http://192.0.2.1/)16
+
+htmlTagValue(thisResponse, TITLE) = thisTag = [Web Authentication Redirect]
+Web Authentication Redirect
+
+REDIRECT!!
+2.  Heap = 39552; htmlSend: 39552
+Accepting Terms and Conditions...
+
+
+Requesting custom.js:
+
+>>>> htmlSend
+htmlSend: 39144
+Memory free heap:  Heap = 39096; Memory free heap:  Heap = 39096;
+>>>> SET_HEAP_MESSAGE
+htmlSend: 39144
+Memory free heap:  Heap = 39096; Memory free heap:  Heap = 39096;
+>>>> htmlSend end heap test
+Connection status: 3
+client status = 0
+client available = 0
+client getLastSSLError = 0
+client getWriteError = 0
+client getWriteError = Connecting to port 80
+SUCCESS! Connecting to port 80
+***********************************
+Connecting to 192.0.2.1; port 80
+***********************************
+192.0.2.1:80 htmlSend connection failed, flushing and trying htmlSendPlainText...
+
+>>>> Start htmlSendPlainText
+htmlSend: 38696
+Memory free heap after OtherClient:  Heap = 38600; htmlSend: 38696
+>>>> htmlSendPlainText
+***********************************
+Connecting to 192.0.2.1; port 80
+***********************************
+Sending OtherClient HTML:
+***********************************
+GET /fs/customwebauth/custom.js HTTP/1.1
+Host: 192.0.2.1
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; ASTE; rv:11.0) like Gecko
+
+Connection: Keep-Alive
+
+
+***********************************
+Memory free heap:  Heap = 38264; htmlSend: 38312
+.......................
+First Response Line = HTTP/1.1 200 OK
+Found Response Content Length = 178
+Found Response Content Location =
+accessRedirect debug
+ResponseLocation = http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+accessRedirect = http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+accessRedirect = /fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html%26ap_mac=aa:aa:aa:aa:aa:aa%26client_mac=cc:cc:cc:cc:cc:cc%26wlan=Visitor%20WiFi%26redirect=github.com/
+
+Response Header:
+***********************************
+HTTP/1.1 200 OK
+Date: Sat, 22 Sep 2018 23:37:42 GMT
+Content-Length: 178
+Content-Type: text/javascript
+Last-Modified: Thu, 21 Jun 2018 18:31:07 GMT
+Cache-Control: public,max-age=3600
+X-Frame-Options: sameorigin
+
+***********************************
+
+Response Payload Content:
+***********************************
+
+$(document).ready(function () {
+
+    $("#term-btn").click(showTerms);
+
+    function showTerms() {
+        $(".terms").fadeIn("slow", function () {
+        });
+    }
+
+}); HTTP / 1.1 400 Bad Request
+Date: Sat, 22 Sep 2018 23: 37: 42 GMT
+Connection: close
+
+400 Bad Request
+
+***********************************
+
+
+Read done! Additional Read Responses:0
+*** End of response. 23 lines.
+
+thisResponseHeader.indexOf(Location: http://192.0.2.1/)-1
+
+htmlTagValue(thisResponse, TITLE) = thisTag = [ument).ready(function () {
+
+$("#term-btn").click(showTerms);
+
+function showTerms() {
+$(".terms").fadeIn("slow", function () {
+});
+}
+
+});HTTP/1.1 400 Bad Request
+Date: Sat, 22 Sep 2018 23:37:42 GMT
+Connection: close
+
+400 Bad Request]
+ument).ready(function () {
+
+$("#term-btn").click(showTerms);
+
+function showTerms() {
+$(".terms").fadeIn("slow", function () {
+});
+}
+
+});HTTP/1.1 400 Bad Request
+Date: Sat, 22 Sep 2018 23:37:42 GMT
+Connection: close
+
+400 Bad Request
+
+thisTag = [ument).ready(function () {
+
+$("#term-btn").click(showTerms);
+
+function showTerms() {
+$(".terms").fadeIn("slow", function () {
+});
+}
+
+});HTTP/1.1 400 Bad Request
+Date: Sat, 22 Sep 2018 23:37:42 GMT
+Connection: close
+
+400 Bad Request]
+CONNECTED!!
+
+
+Requesting URL redirect:
+
+>>>> htmlSend
+htmlSend: 38920
+Memory free heap:  Heap = 38872; Memory free heap:  Heap = 38872;
+>>>> SET_HEAP_MESSAGE
+htmlSend: 38920
+Memory free heap:  Heap = 38872; Memory free heap:  Heap = 38872;
+>>>> htmlSend end heap test
+Connection status: 3
+client status = 0
+client available = 0
+client getLastSSLError = 0
+client getWriteError = 0
+client getWriteError = Connecting to port 80
+SUCCESS! Connecting to port 80
+***********************************
+Connecting to 192.0.2.1; port 80
+***********************************
+192.0.2.1:80 htmlSend connection failed, flushing and trying htmlSendPlainText...
+
+>>>> Start htmlSendPlainText
+htmlSend: 38600
+Memory free heap after OtherClient:  Heap = 38504; htmlSend: 38600
+>>>> htmlSendPlainText
+***********************************
+Connecting to 192.0.2.1; port 80
+***********************************
+Sending OtherClient HTML:
+***********************************
+GET /fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html%26ap_mac=aa:aa:aa:aa:aa:aa%26client_mac=cc:cc:cc:cc:cc:cc%26wlan=Visitor%20WiFi%26redirect=github.com/ HTTP/1.1
+Host: 192.0.2.1
+Connection: Keep-Alive
+
+
+***********************************
+Memory free heap:  Heap = 38168; htmlSend: 38216
+.........
+First Response Line = HTTP/1.1 200 OK
+Found Response Content Length = 21132
+Found Response Content Location =
+accessRedirect debug
+ResponseLocation = http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+accessRedirect = http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+accessRedirect = /fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html%26ap_mac=aa:aa:aa:aa:aa:aa%26client_mac=cc:cc:cc:cc:cc:cc%26wlan=Visitor%20WiFi%26redirect=github.com/
+
+Response Header:
+***********************************
+HTTP/1.1 200 OK
+Date: Sat, 22 Sep 2018 23:38:08 GMT
+Content-Length: 21132
+Content-Type: text/html
+Last-Modified: Thu, 21 Jun 2018 18:31:07 GMT
+Cache-Control: public,max-age=3600
+X-Frame-Options: sameorigin
+
+***********************************
+
+Response Payload Content:
+***********************************
+
+<html>
+<head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <title>Welcome to Your_Company_Name_Here</title>
+    <script>
+
+        function submitAction() {
+            var link = document.location.href;
+            var searchString = "redirect=";
+            var equalIndex = link.indexOf(searchString);
+            var redirectUrl = "";
+
+            if (document.forms[0].action == "") {
+                var url = window.location.href;
+                var args = new Object();
+                var query = location.search.substring(1);
+                var pairs = query.split("&");
+                for (var i = 0; i < pairs.length; i++) {
+                    var pos = pairs[i].indexOf('=');
+                    if (pos == -1) continue;
+                    var argname = pairs[i].substring(0, pos);
+                    var value = pairs[i].substring(pos + 1);
+                    args[argname] = unescape(value);
+                }
+                document.forms[0].action = args.switch_url;
+            }
+            if (equalIndex >= 0) {
+                equalIndex += searchString.length;
+                redirectUrl = "";
+                redirectUrl += link.substring(equalIndex);
+            }
+            if (redirectUrl.length > 255)
+                redirectUrl = redirectUrl.substring(0, 255);
+            document.forms[0].redirect_url.value = redirectUrl;
+            document.forms[0].buttonClicked.value = 4;
+            document.forms[0].submit();
+        }
+
+        function reject() {
+            alert("You will not be able to access the system!");
+        }
+
+
+        function loadAction() {
+            var url = window.location.href;
+            var args = new Object();
+            var query = location.search.substring(1);
+            var pairs = query.split("&");
+            for (var i = 0; i < pairs.length; i++) {
+                var pos = pairs[i].indexOf('=');
+                if (pos == -1) continue;
+                var argname = pairs[i].substring(0, pos);
+                var value = pairs[i].substring(pos + 1);
+                args[argname] = unescape(value);
+            }
+            document.forms[0].action = args.switch_url;
+
+        }
+
+    </script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-1.12.0.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="custom.js"></script>
+</head>
+
+<body onload="loadAction();">
+
+    <div class="jumbotron header">
+
+        <div class="header-text">
+            <h1 class="title">GUEST NETWORK</h1>
+            <h2 class="subtitle">Visitor Wireless Network</h2>
+        </div>
+
+    </div>
+    <div class="container">
+
+        <div class="text-box">
+            <h2 class="welcome">Welcome to the GUEST NETWORK Visitor WiFi Network</h2>
+            <div class="button-area">
+                <div class="accept-form btn-group btn-group-lg col-xs-12 row text-center">
+                    <form>
+                        <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
+                        <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
+                        <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="0">
+                        <p>
+                            <input class="button accept-button btn btn-primary term-btn" type="button" name="Submit" value="Click Here to Accept Terms and Conditions"
+                                   onclick="submitAction();">
+                        </p>
+                    </form>
+                    <br>
+                    <br>
+                    <div class="btn btn-group-lg col-xs-12 tow text-center" id="show-terms">
+                        <p>
+                            <input class="btn btn-primary term-btn" id="term-btn" type="button" value="Click Here to Show Terms and Conditions">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="terms">
+                <p class="info">
+
+                    <h3 class="text-center">Wireless Hotspot Terms and Conditions</h3>
+
+                    <br>
+                    <br> You are about to access the Internet through a wireless hotspot operated on behalf of bla bla bla
+                </p>
+            </div>
+        </div>
+</body>
+</html>
+
+
+***********************************
+
+
+Read done! Additional Read Responses:0
+*** End of response. 9 lines.
+
+thisResponseHeader.indexOf(Location: http://192.0.2.1/)-1
+
+htmlTagValue(thisResponse, TITLE) = thisTag = []
+
+
+thisTag = []
+CONNECTED!!
+Header so far:
+:
+GET http://192.0.2.1/login.html?buttonClicked=4&redirect_url=gojimmypi-dev-imageconvert2bmp.azurewebsites.net HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Referer: http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+
+
+
+
+
+accessRedirect:
+/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html%26ap_mac=aa:aa:aa:aa:aa:aa%26client_mac=cc:cc:cc:cc:cc:cc%26wlan=Visitor%20WiFi%26redirect=github.com/
+
+
+
+
+
+
+
+
+
+
+>>>> htmlSend
+htmlSend: 37736
+Memory free heap:  Heap = 37688; Memory free heap:  Heap = 37688;
+>>>> SET_HEAP_MESSAGE
+htmlSend: 37736
+Memory free heap:  Heap = 37688; Memory free heap:  Heap = 37688;
+>>>> htmlSend end heap test
+Connection status: 3
+client status = 0
+client available = 0
+client getLastSSLError = 0
+client getWriteError = 0
+client getWriteError = Connecting to port 80
+SUCCESS! Connecting to port 80
+***********************************
+Connecting to 192.0.2.1; port 80
+***********************************
+192.0.2.1:80 htmlSend connection failed, flushing and trying htmlSendPlainText...
+
+>>>> Start htmlSendPlainText
+htmlSend: 36968
+Memory free heap after OtherClient:  Heap = 36872; htmlSend: 36968
+>>>> htmlSendPlainText
+***********************************
+Connecting to 192.0.2.1; port 80
+***********************************
+Sending OtherClient HTML:
+***********************************
+GET http://192.0.2.1/login.html?buttonClicked=4&redirect_url=gojimmypi-dev-imageconvert2bmp.azurewebsites.net HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Referer: http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; ASTE; rv:11.0) like Gecko
+DNT: 1
+If-Modified-Since: Mon 31 Oct 2016 23:28:25 GMT
+Content-Length: 77
+Host: 192.0.2.1
+Connection: Keep-Alive
+
+buttonClicked=4&redirect_url=gojimmypi-dev-imageconvert2bmp.azurewebsites.net
+***********************************
+Memory free heap:  Heap = 36536; htmlSend: 36584
+.............................
+First Response Line = HTTP/1.1 200 OK
+Found Response Content Length = 21132
+Found Response Content Location =
+accessRedirect debug
+ResponseLocation = http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+accessRedirect = http://192.0.2.1/fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html&ap_mac=aa:aa:aa:aa:aa:aa&client_mac=cc:cc:cc:cc:cc:cc&wlan=Visitor%20WiFi&redirect=github.com/
+accessRedirect = /fs/customwebauth/login.html?switch_url=http://192.0.2.1/login.html%26ap_mac=aa:aa:aa:aa:aa:aa%26client_mac=cc:cc:cc:cc:cc:cc%26wlan=Visitor%20WiFi%26redirect=github.com/
+
+Response Header:
+***********************************
+HTTP/1.1 200 OK
+Date: Sat, 22 Sep 2018 23:38:28 GMT
+Transfer-Encoding: chunked
+Content-Type: text/html
+Pragma: no-cache
+Expires: Sat, 22 Sep 2018 23:38:28 GMT
+Last-Modified: Sat, 22 Sep 2018 23:38:28 GMT
+Cache-Control: no-cache
+X-Frame-Options: sameorigin
+
+***********************************
+
+Response Payload Content:
+***********************************
+
+00000060
+<html>
+<head>
+    <style>
+        <!--
+        h1 {
+            font-family: Tahoma, Arial, Helvetica, sans-serif;
+            color: #787 0000015f a7f;
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        td {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            color: #336699;
+            padding: 10px 5px 0px 0px;
+        }
+
+            td.caption {
+                font-size: 12px;
+                font-weight: normal;
+                color: #000000;
+                padding: 2px;
+            }
+
+        input.button {
+            font-family: Arial, Helvetica, sans-serif;
+            fon 0000015f t-size: 12px;
+            font-weight: bold;
+            background-color: #c9cbd4;
+            color: #333333;
+            width: 80px;
+        }
+        -->
+    </style>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <title>Logged In</title>
+</head>
+<body bgcolor="#DADCE5" topmargin="50" marginheight="50">
+    <FORM method="post" ACTION="/login_success.html">
+        <INPUT TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="https://www.github.com">
+        <INPUT TYPE="hidden" NAME="logoutPageName" SIZE="255" MAXLENGTH="255" VALUE="logout.html">
+    </FORM>
+
+    <div align="center">
+
+        0000015f
+        <h1>Connection Successful</h1>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center" class="caption" width="340"> You can now use all our regular network services over the wireless network.</td>
+            </tr>
+            <tr>
+                <td class="caption">&nbsp;</td>
+            </tr>
+            <script>
+                /* Note: Value 'ILLEGAL_ACCESS'
+                00000169
+                means this page has been attemted to access directly rather than a
+                redirect from login page. So in that case better redirect user to login page again */
+                if (document.forms[0].redirect_url.value != "ILLEGAL_ACCESS") {
+                    if (document.forms[0].redirect_url.value != "") {
+                        var redirurl = document.forms[0].redirect_url.value;
+                        var
+                        00000155
+                        searchString = "http";
+                        var equalIndex = redirurl.indexOf(searchString);
+                        if (equalIndex != 0) {
+                            redirurl = "http://" + redirurl;
+                        }
+                        window.location.href = redirurl;
+                    }
+                }
+                else
+                    window.location.href = "login.html";
+            </script>
+        </table>
+    </div>
+
+</body>
+<HE 000000a1
+    AD>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    </HEAD>
+</html>
+
+
+
+0
+
+
+***********************************
+
+
+Read done! Additional Read Responses:0
+*** End of response. 29 lines.
+
+thisResponseHeader.indexOf(Location: http://192.0.2.1/)-1
+
+htmlTagValue(thisResponse, TITLE) = thisTag = [060
+<html>
+
+<head>
+    <style>
+        < !-- h1 {
+            font-family: Tahoma, Arial, Helvetica, sans-serif;
+            color: #787 0000015f a7f;
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        td {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            color: #336699;
+            padding: 10px 5px 0px 0px;
+        }
+
+        td.caption {
+            font-size: 12px;
+            font-weight: normal;
+            color: #000000;
+            padding: 2px;
+        }
+
+        input.button {
+            font-family: Arial, Helvetica, sans-serif;
+            fon 0000015f t-size: 12px;
+            font-weight: bold;
+            background-color: #c9cbd4;
+            color: #333333;
+            width: 80px;
+        }
+
+        -->
+    </style>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <title>Logged In</title>
+</head 00000155>
+
+<body bgcolor="#DADCE5" topmargin="50" marginheight="50">
+    <FORM method="post" ACTION="/login_success.html">
+        <INPUT TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="https://www.github.com">
+        <INPUT TYPE="hidden" NAME="logoutPageName" SIZE="255" MAXLENGTH="255" VALUE="logout.html">
+    </FORM>
+
+    <div align="center">
+
+        0000015f
+        <h1>Connection Successful</h1>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center" class="caption" width="340"> You can now use all our regular network services over the wireless network.</td>
+            </tr>
+            <tr>
+                <td class="caption">&nbsp;</td>
+            </tr>
+            <script>
+                /* Note: Value 'ILLEGAL_ACCESS'
+                00000169
+                means this page has been attemted to access directly rather than a
+                redirect from login page. So in that case better redirect user to login page again */
+                if (document.forms[0].redirect_url.value != "ILLEGAL_ACCESS") {
+                    if (document.forms[0].redirect_url.value != "") {
+                        var redirurl = document.forms[0].redirect_url.value;
+                        var
+                        00000155
+                        searchString = "http";
+                        var equalIndex = redirurl.indexOf(searchString);
+                        if (equalIndex != 0) {
+                            redirurl = "http://" + redirurl;
+                        }
+                        window.location.href = redirurl;
+                    }
+                }
+                else
+                    window.location.href = "login.html";
+            </script>
+        </table>
+    </div>
+
+</body>
+<HE 000000a1 AD>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    </HEAD>
+
+</html>
+
+
+
+0] 060
+<html>
+
+<head>
+    <style>
+        < !-- h1 {
+            font-family: Tahoma, Arial, Helvetica, sans-serif;
+            color: #787 0000015f a7f;
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        td {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            color: #336699;
+            padding: 10px 5px 0px 0px;
+        }
+
+        td.caption {
+            font-size: 12px;
+            font-weight: normal;
+            color: #000000;
+            padding: 2px;
+        }
+
+        input.button {
+            font-family: Arial, Helvetica, sans-serif;
+            fon 0000015f t-size: 12px;
+            font-weight: bold;
+            background-color: #c9cbd4;
+            color: #333333;
+            width: 80px;
+        }
+
+        -->
+    </style>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <title>Logged In</title>
+</head 00000155>
+
+<body bgcolor="#DADCE5" topmargin="50" marginheight="50">
+    <FORM method="post" ACTION="/login_success.html">
+        <INPUT TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="https://www.github.com">
+        <INPUT TYPE="hidden" NAME="logoutPageName" SIZE="255" MAXLENGTH="255" VALUE="logout.html">
+    </FORM>
+
+    <div align="center">
+
+        0000015f
+        <h1>Connection Successful</h1>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center" class="caption" width="340"> You can now use all our regular network services over the wireless network.</td>
+            </tr>
+            <tr>
+                <td class="caption">&nbsp;</td>
+            </tr>
+            <script>
+                /* Note: Value 'ILLEGAL_ACCESS'
+                00000169
+                means this page has been attemted to access directly rather than a
+                redirect from login page. So in that case better redirect user to login page again */
+                if (document.forms[0].redirect_url.value != "ILLEGAL_ACCESS") {
+                    if (document.forms[0].redirect_url.value != "") {
+                        var redirurl = document.forms[0].redirect_url.value;
+                        var
+                        00000155
+                        searchString = "http";
+                        var equalIndex = redirurl.indexOf(searchString);
+                        if (equalIndex != 0) {
+                            redirurl = "http://" + redirurl;
+                        }
+                        window.location.href = redirurl;
+                    }
+                }
+                else
+                    window.location.href = "login.html";
+            </script>
+        </table>
+    </div>
+
+</body>
+<HE 000000a1 AD>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    </HEAD>
+
+</html>
+
+
+
+0
+
+thisTag = [060
+<html>
+
+<head>
+    <style>
+        < !-- h1 {
+            font-family: Tahoma, Arial, Helvetica, sans-serif;
+            color: #787 0000015f a7f;
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        td {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            color: #336699;
+            padding: 10px 5px 0px 0px;
+        }
+
+        td.caption {
+            font-size: 12px;
+            font-weight: normal;
+            color: #000000;
+            padding: 2px;
+        }
+
+        input.button {
+            font-family: Arial, Helvetica, sans-serif;
+            fon 0000015f t-size: 12px;
+            font-weight: bold;
+            background-color: #c9cbd4;
+            color: #333333;
+            width: 80px;
+        }
+
+        -->
+    </style>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <title>Logged In</title>
+</head 00000155>
+
+<body bgcolor="#DADCE5" topmargin="50" marginheight="50">
+    <FORM method="post" ACTION="/login_success.html">
+        <INPUT TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="https://www.github.com">
+        <INPUT TYPE="hidden" NAME="logoutPageName" SIZE="255" MAXLENGTH="255" VALUE="logout.html">
+    </FORM>
+
+    <div align="center">
+
+        0000015f
+        <h1>Connection Successful</h1>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center" class="caption" width="340"> You can now use all our regular network services over the wireless network.</td>
+            </tr>
+            <tr>
+                <td class="caption">&nbsp;</td>
+            </tr>
+            <script>
+                /* Note: Value 'ILLEGAL_ACCESS'
+                00000169
+                means this page has been attemted to access directly rather than a
+                redirect from login page. So in that case better redirect user to login page again */
+                if (document.forms[0].redirect_url.value != "ILLEGAL_ACCESS") {
+                    if (document.forms[0].redirect_url.value != "") {
+                        var redirurl = document.forms[0].redirect_url.value;
+                        var
+                        00000155
+                        searchString = "http";
+                        var equalIndex = redirurl.indexOf(searchString);
+                        if (equalIndex != 0) {
+                            redirurl = "http://" + redirurl;
+                        }
+                        window.location.href = redirurl;
+                    }
+                }
+                else
+                    window.location.href = "login.html";
+            </script>
+        </table>
+    </div>
+
+</body>
+<HE 000000a1 AD>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    </HEAD>
+
+</html>
+
+
+
+0]
+CONNECTED!!
+>>>> htmlSend
+htmlSend: 37984
+Memory free heap:  Heap = 37936; Memory free heap:  Heap = 37936;
+>>>> SET_HEAP_MESSAGE
+htmlSend: 37984
+Memory free heap:  Heap = 37936; Memory free heap:  Heap = 37936;
+>>>> htmlSend end heap test
+Connection status: 3
+client status = 0
+client available = 0
+client getLastSSLError = 0
+client getWriteError = 0
+client getWriteError = Connecting to port 80
+SUCCESS! Connecting to port 80
+***********************************
+Connecting to github.com; port 80
+***********************************
+github.com:80 htmlSend connection failed, flushing and trying htmlSendPlainText...
+
+>>>> Start htmlSendPlainText
+htmlSend: 37272
+Memory free heap after OtherClient:  Heap = 37176; htmlSend: 37272
+>>>> htmlSendPlainText
+***********************************
+Connecting to github.com; port 80
+***********************************
+Sending OtherClient HTML:
+***********************************
+GET http://github.com/ HTTP/1.1
+Host: github.com
+Content-Encoding: identity
+Connection: keep-alive
+
+
+***********************************
+Memory free heap:  Heap = 37064; htmlSend: 37112
+.....
+First Response Line = HTTP/1.1 301 Moved Permanently
+Found Response Content Length = 21132
+Found Response Content Location =
+accessRedirect debug
+
+Response Header:
+***********************************
+HTTP/1.1 301 Moved Permanently
+Content-length: 0
+Location: https://github.com/
+
+***********************************
+
+Response Payload Content:
+***********************************
+
+
+***********************************
+
+
+Read done! Additional Read Responses:0
+*** End of response. 5 lines.
+
+thisResponseHeader.indexOf(Location: http://192.0.2.1/)-1
+
+htmlTagValue(thisResponse, TITLE) = thisTag = []
+
+
+thisTag = []
+CONNECTED!!
+confirmedInternetConnectivity - success!
+Successfully connected!
+Heap (setupWiFi end);  Heap = 37536; htmlSend: 37584
+>> setup complete!
+
+
+
+Success!
