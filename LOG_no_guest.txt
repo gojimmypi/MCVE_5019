@@ -1,0 +1,137 @@
+Opening port
+Port open
+
+SDK:2.2.1(cfd48f3)/Core:win-2.5.0-dev/lwIP:2.0.3(STABLE-2_0_3_RELEASE/glue:arduino-2.4.1-13-g163bb82)/BearSSL:94e9704
+scandone
+state: 0 -> 2 (b0)
+state: 2 -> 3 (0)
+state: 3 -> 5 (10)
+add 0
+aid 2
+cnt
+
+connected with testbench, channel 4
+dhcp client start...
+
+SDK:2.2.1(cfd48f3)/Core:win-2.5.0-dev/lwIP:2.0.3(STABLE-2_0_3_RELEASE/glue:arduino-2.4.1-13-g163bb82)/BearSSL:94e9704
+MCVE 5029 V1
+Initial time:28803
+Thu Jan  1 08:00:03 1970
+
+
+Waiting for time
+ip:192.168.1.111,mask:255.255.255.0,gw:192.168.1.10
+Next time:1537720389
+Sun Sep 23 16:33:09 2018
+
+Final time:
+1537720389
+Sun Sep 23 16:33:09 2018
+
+Heap (setupWiFi begin) Heap = 39176;
+htmlSetClient(&client)... Heap = 39160;
+setupWiFi Heap = 39192
+setupWiFi Heap = 39192
+calling wifiConnect...
+***********************************
+wifiConnect: Connecting to testbench
+***********************************
+setupWiFi Heap = 39192
+setupWiFi Heap = 39192
+setupWiFi Heap = 38960
+Starting WiFi Connection Loop...
+.scandone
+Connected!
+pm open,type:2 0
+MAC Address=5CCF7F17AF58
+setupWiFi Heap = 38656
+setupWiFi Heap = 38656
+WiFi connected. My IP address:
+
+192.168.1.111
+start confirmedInternetConnectivity: 38608
+
+***********************************
+confirmedInternetConnectivity() - htmlString:
+***********************************
+GET http://github.com/ HTTP/1.1
+Host: github.com
+Content-Encoding: identity
+Connection: keep-alive
+
+
+***********************************
+1.  Heap = 38512; start confirmedInternetConnectivity: 38448
+>>>> htmlSend
+start confirmedInternetConnectivity: 38288
+Memory free heap:  Heap = 38304; Memory free heap:  Heap = 38304;
+>>>> SET_HEAP_MESSAGE
+htmlSend: 38352
+Memory free heap:  Heap = 38304; Memory free heap:  Heap = 38304;
+>>>> htmlSend end heap test
+Connection status: 3
+client status = 0
+client available = 0
+client getLastSSLError = 0
+client getWriteError = 0
+client getWriteError = Connecting to port 80
+SUCCESS! Connecting to port 80
+Target is not port 80; stopAll...
+***********************************
+Connecting to github.com; port 443
+***********************************
+Sending HTML:
+***********************************
+GET http://github.com/ HTTP/1.1
+Host: github.com
+Content-Encoding: identity
+Connection: keep-alive
+
+
+***********************************
+Memory free heap:  Heap = 15568; htmlSend: 15616
+........................
+First Response Line = HTTP/1.1 200 OK
+Found Response Content Length = 401
+Found Response Content Location =
+accessRedirect debug
+
+Response Header:
+***********************************
+HTTP/1.1 200 OK
+Content-Type: text/html
+Last-Modified: Tue, 24 Nov 2009 00:48:25 GMT
+Accept-Ranges: bytes
+ETag: "de55abd49f6cca1:0"
+Server: Microsoft-IIS/8.5
+X-Powered-By: ASP.NET
+Date: Mon, 24 Sep 2018 00:33:16 GMT
+Content-Length: 401
+
+***********************************
+
+Response Payload Content:
+***********************************
+***********************************
+
+
+Read done! Additional Read Responses:0
+*** End of response. 24 lines.
+
+thisResponseHeader.indexOf(Location: http://192.0.2.1/)-1
+
+htmlTagValue(thisResponse, TITLE) = thisTag = [Redirector Page]
+Redirector Page
+
+thisTag = [Redirector Page]
+2.  Heap = 15840; htmlSend: 15840
+
+Connected to internet!
+
+confirmedInternetConnectivity - success!
+Successfully connected!
+Heap (setupWiFi end);  Heap = 15952; htmlSend: 16000
+>> setup complete!
+
+
+

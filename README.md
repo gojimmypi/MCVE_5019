@@ -12,3 +12,11 @@ IDE Settings:
 See application settings in GlobalDefine.h
 
 When connecting to a normal WiFi AP, this app works just fine. When first connecting to a guest WiFi and needing to "Accept Terms and Conditions", the `client.connect(DASHBOARD_HOST, httpPort)` fails with an error.
+
+Fixed in https://github.com/esp8266/Arduino/commit/1a44f79a9e26ebb72900caef8e03a2b7df78724d witth time set properly
+
+
+https://github.com/esp8266/Arduino/blob/00c35be985441c6a6a1f4a0d849434d89611c412/tools/sdk/include/bearssl/bearssl_x509.h
+
+
+See also https://github.com/esp8266/Arduino/issues/1679

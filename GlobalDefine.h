@@ -27,12 +27,15 @@
 static const char* WIFI_SSID = "my-wifi-SSID"
 static const char* WIFI_PWD = "my-WiFi-PASSWORD"
 
-static const char* DASHBOARD_DEFAULT_DATA = "sampledata.json";
-static const char* DASHBOARD_PATH = "/theDataPath/";
-static const char* DASHBOARD_APP = "/theDashboardApplicationPath/";
-static const char* DASHBOARD_HOST = "mydashboardhost.com";
-static const char* DASHBOARD_KEY = "XYZZY";
-static const char* DASHBOARD_HOST_THUMBPRINT = "35 85 74 EF 67 35 A7 CE 40 69 50 F3 C0 F6 80 CF 80 3B 2E 19";
+// static const char* DASHBOARD_HOST __attribute__((unused)) = "www.digicert.com"; // www.digicert.com
+// static const char* DASHBOARD_HOST_THUMBPRINT __attribute__((unused)) = "66 62 E9 56 EF 49 C4 E3 9D 43 A2 A6 6F 42 25 18 BC C3 3A E0"; // digicert
+
+static const char* DASHBOARD_DEFAULT_DATA __attribute__((unused)) = "sampledata.json";
+static const char* DASHBOARD_PATH __attribute__((unused)) = "/theDataPath/";
+static const char* DASHBOARD_APP __attribute__((unused)) = "/theDashboardApplicationPath/";
+static const char* DASHBOARD_HOST __attribute__((unused)) = "mydashboardhost.com";
+static const char* DASHBOARD_KEY __attribute__((unused)) = "XYZZY";
+
 // will build:  http://mydashboardhost.com/theDashboardApplicationPath/
 //      and:    http://mydashboardhost.com/theDataPath/
 // 

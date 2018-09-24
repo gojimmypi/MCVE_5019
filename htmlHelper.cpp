@@ -271,6 +271,15 @@ int htmlSend(const char* thisHost, int thisPort, String sendHeader) {
 		return 6;
 	}
 
+	Serial.print("client status = ");
+	Serial.println(myClient->status());
+	Serial.print("client available = ");
+	Serial.println(myClient->available());
+	Serial.print("client getLastSSLError = ");
+	Serial.println(myClient->getLastSSLError());
+	Serial.print("client getWriteError = ");
+	Serial.println(myClient->getWriteError());
+	Serial.print("client getWriteError = ");
 
     yield();
     Serial.println("Connecting to port 80");
@@ -285,7 +294,7 @@ int htmlSend(const char* thisHost, int thisPort, String sendHeader) {
     yield();
 	if (thisPort != 80) {
 		Serial.println("Target is not port 80; stopAll...");
-		myClient->stopAll;
+		myClient->stopAll();
 		delay(20);
 	}
     HTTP_DEBUG_PRINTLN(DEBUG_SEPARATOR);
@@ -300,7 +309,7 @@ int htmlSend(const char* thisHost, int thisPort, String sendHeader) {
 		Serial.print(thisHost); Serial.print(":"); Serial.print(thisPort);
 		Serial.println(" htmlSend connection failed, flushing and trying htmlSendPlainText...");
 		myClient->flush();
-		myClient->stopAll;
+		myClient->stopAll();
 		return htmlSendPlainText(thisHost, sendHeader);
 	}
    
@@ -438,7 +447,7 @@ int htmlSend(const char* thisHost, int thisPort, String sendHeader) {
 	if (myDebugLevel >= 2) { // only show the response content for debug level 2 or greater
 		Serial.println("Response Payload Content:");
 		Serial.println(DEBUG_SEPARATOR);
-		Serial.println(thisResponse);
+		// Serial.println(thisResponse);
 		Serial.println(DEBUG_SEPARATOR);
 		Serial.println("");
 	}
@@ -506,7 +515,9 @@ int htmlSend(WIFI_CLIENT_CLASS* thisClient, const char* thisHost, int thisPort, 
 
 
 int htmlSendPlainText(const char* thisHost, String sendHeader) {
-	HEAP_DEBUG_PRINT("Memory free heap: ");	HEAP_DEBUG_PRINTLN(DEFAULT_DEBUG_MESSAGE);
+	HTTP_DEBUG_PRINTLN("");
+	HTTP_DEBUG_PRINTLN(">>>> Start htmlSendPlainText");
+	HEAP_DEBUG_PRINTLN(DEFAULT_DEBUG_MESSAGE);
 	int thisPort = 80;
 
 	WiFiClient OtherClient; // note regardless of default client, we create another plain text, non-secure client here
